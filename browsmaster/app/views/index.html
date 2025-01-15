@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liza Brows | Мастер по бровям</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script>
+        document.getElementById('light-theme').addEventListener('click', function() {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        });
+
+        document.getElementById('dark-theme').addEventListener('click', function() {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        // Загрузка предпочтений темы пользователя
+        window.onload = function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
+    </script>
+</head>
+
+
+<body>
+    <div class="theme-toggle">
+        <button id="light-theme">Светлая тема</button>
+        <button id="dark-theme">Темная тема</button>
+    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>LIZA BROWS</h1>
+                <p>Твой профессиональный мастер по бровям</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>О СТУДИИ</h2>
+                        <p>
+                            Я специализируюсь на создании идеальных бровей, которые подчеркивают естественную красоту
+                            каждого клиента.
+                            Мой подход основан на индивидуальности и внимании к деталям.
+                        </p>
+                        <p>
+                            В работе используются только премиальные материалы и современные
+                            техники для достижения наилучшего результата.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Лиза - мастер по бровям" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <div class="container">
+                <h2>ПОРТФОЛИО</h2>
+                <div class="portfolio-grid">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 1" />
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 2" />
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 3" />
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 4" />
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 5" />
+                    <img src="/placeholder.svg?height=400&width=400" alt="Portfolio image 6" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <h2>УСЛУГИ</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <span>Коррекция бровей</span>
+                        <span>1000 ₽</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Окрашивание бровей</span>
+                        <span>1500 ₽</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Ламинирование бровей</span>
+                        <span>2500 ₽</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Комплекс (коррекция + окрашивание)</span>
+                        <span>2000 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <div class="container">
+                <h2>ОТЗЫВЫ</h2>
+                <div class="reviews-grid">
+                    <div class="review-item">
+                        <p>
+                            "Прекрасный результат! Лиза - настоящий профессионал своего
+                            дела. Очень довольна результатом и обязательно приду снова."
+                        </p>
+                        <p class="review-author">Анна К.</p>
+                    </div>
+                    <div class="review-item">
+                        <p>
+                            "Прекрасный результат! Лиза - настоящий профессионал своего
+                            дела. Очень довольна результатом и обязательно приду снова."
+                        </p>
+                        <p class="review-author">Елена М.</p>
+                    </div>
+                    <div class="review-item">
+                        <p>
+                            "Прекрасный результат! Лиза - настоящий профессионал своего
+                            дела. Очень довольна результатом и обязательно приду снова."
+                        </p>
+                        <p class="review-author">Ольга С.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <h2>КОНТАКТЫ</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required />
+                    <input type="tel" placeholder="Телефон" required />
+                    <textarea placeholder="Сообщение" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+                <div class="contact-info">
+                    <p>Адрес студии:</p>
+                    <p>ул. Примерная, д. 123</p>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const lightThemeButton = document.getElementById('light-theme');
+        const darkThemeButton = document.getElementById('dark-theme');
+
+        lightThemeButton.addEventListener('click', () => {
+            document.body.classList.remove('dark-theme');
+            document.body.classList.add('light-theme');
+        });
+
+        darkThemeButton.addEventListener('click', () => {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
+        });
+    </script>
+</body>
+
+</html>

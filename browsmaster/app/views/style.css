@@ -1,0 +1,214 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Services Section */
+.services {
+  padding: 5rem 0;
+}
+
+.services-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-author {
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 5rem 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+/* Theme Styles */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .hero {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .review-item,
+body.dark-theme .contact,
+body.dark-theme .about {
+  background-color: #121212;
+}
+
+body.dark-theme .portfolio {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .reviews {
+  background-color: #1e1e1e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
